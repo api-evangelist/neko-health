@@ -1,0 +1,46 @@
+generated: '2026-07-20'
+method: searched
+source: https://account.nekohealth.com/.well-known/openid-configuration
+docs: https://account.nekohealth.com/.well-known/oauth-authorization-server
+note: >-
+  Derived from the live Duende IdentityServer OIDC discovery document at
+  account.nekohealth.com. This is the identity provider for the Neko patient
+  application (client_id patientui); Neko publishes no third-party developer API.
+  No OpenAPI is available in the repo, so this profile is captured from the
+  discovery metadata rather than from securitySchemes.
+summary:
+  types:
+  - oauth2
+  - openIdConnect
+  oauth2_flows:
+  - authorizationCode
+  - clientCredentials
+  - implicit
+  - deviceCode
+  - ciba
+  pkce: true
+  login_methods:
+  - phone
+  - bankid
+schemes:
+- name: NekoOIDC
+  type: openIdConnect
+  openIdConnectUrl: https://account.nekohealth.com/.well-known/openid-configuration
+  issuer: https://account.nekohealth.com
+  authorization_endpoint: https://account.nekohealth.com/connect/authorize
+  token_endpoint: https://account.nekohealth.com/connect/token
+  userinfo_endpoint: https://account.nekohealth.com/connect/userinfo
+  end_session_endpoint: https://account.nekohealth.com/connect/endsession
+  revocation_endpoint: https://account.nekohealth.com/connect/revocation
+  introspection_endpoint: https://account.nekohealth.com/connect/introspect
+  device_authorization_endpoint: https://account.nekohealth.com/connect/deviceauthorization
+  pushed_authorization_request_endpoint: https://account.nekohealth.com/connect/par
+  id_token_signing_alg: RS256
+  token_endpoint_auth_methods:
+  - client_secret_basic
+  - client_secret_post
+  scopes:
+  - openid
+  - profile
+  - api.backend
+  - offline_access

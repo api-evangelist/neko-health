@@ -1,8 +1,17 @@
 aid: neko-health
 name: Neko Health
-description: 'Neko Health is a company surfaced as a portfolio company of atomico, general-catalyst, lightspeed-venture-partners
-  and added to the API Evangelist network as a stub for enrichment. Sector: health. This profile is a
-  lead awaiting the enrichment pipeline.'
+description: >-
+  Neko Health is a Swedish preventive-healthcare company founded in 2018 by
+  Daniel Ek and Hjalmar Nilsonne. It designs, engineers, and assembles its own
+  full-body scanning hardware in Stockholm and operates clinics across Sweden, the
+  UK (London, Manchester, Birmingham) and, following a $700M Series C, the United
+  States. The roughly 60-minute Neko Health Scan is a non-invasive, radiation-free
+  examination that captures millions of data points across the skin, heart, blood,
+  and circulation in a single visit, feeding a consumer patient app. Neko exposes
+  no public third-party developer API; its only public machine surface is a Duende
+  IdentityServer OIDC provider (account.nekohealth.com) that authenticates the
+  patient application. This profile was surfaced as a venture-portfolio lead and
+  enriched from Neko's public web and identity surface.
 url: https://raw.githubusercontent.com/api-evangelist/neko-health/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,12 +21,37 @@ x-backed-by:
 - lightspeed-venture-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 7
+  pass: local-v1
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
+image: https://www.nekohealth.com/favicon.ico
 tags:
 - Company
 - Health
+- Healthcare
+- Preventive Health
+- Medical
+- Body Scan
+- Diagnostics
+- Consumer Health
+- OpenID Connect
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -27,3 +61,31 @@ maintainers:
 common:
 - type: Website
   url: https://www.nekohealth.com
+- type: About
+  url: https://www.nekohealth.com/gb/en/about
+- type: Support
+  url: https://www.nekohealth.com/us/en/faq
+- type: SignUp
+  url: https://account.nekohealth.com/login/phone
+- type: Login
+  url: https://app.nekohealth.com/
+- type: Pricing
+  url: https://www.nekohealth.com/se/en/health-scan
+- type: PrivacyPolicy
+  url: https://www.nekohealth.com/se/en/privacy-policy
+- type: TermsOfService
+  url: https://legal.nekohealth.com/
+- type: Blog
+  url: https://www.nekohealth.com/gb/en/press
+- type: WellKnown
+  url: well-known/neko-health-well-known.yml
+- type: Authentication
+  url: authentication/neko-health-authentication.yml
+- type: OAuthScopes
+  url: scopes/neko-health-scopes.yml
+- type: OpenIDConnect
+  url: https://account.nekohealth.com/.well-known/openid-configuration
+- type: Conformance
+  url: conformance/neko-health-conformance.yml
+- type: DomainSecurity
+  url: security/neko-health-domain-security.yml

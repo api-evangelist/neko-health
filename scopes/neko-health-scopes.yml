@@ -1,0 +1,29 @@
+generated: '2026-07-20'
+method: searched
+source: https://account.nekohealth.com/.well-known/openid-configuration
+docs: https://account.nekohealth.com/.well-known/oauth-authorization-server
+note: >-
+  Scopes advertised by the Neko patient-app OIDC provider (Duende IdentityServer).
+  These are consumer/patient authentication scopes, not a third-party API
+  permission surface. Descriptions are standard OIDC meanings; api.backend is
+  Neko's own backend resource scope.
+schemes:
+- name: NekoOIDC
+  source: https://account.nekohealth.com/.well-known/openid-configuration
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://account.nekohealth.com/connect/authorize
+    tokenUrl: https://account.nekohealth.com/connect/token
+scopes:
+- scope: openid
+  description: Standard OpenID Connect scope; requests an ID token for the subject.
+  flows: [authorizationCode]
+- scope: profile
+  description: Access to the end-user's basic profile claims.
+  flows: [authorizationCode]
+- scope: api.backend
+  description: Access to Neko's backend resource API used by the patient application.
+  flows: [authorizationCode]
+- scope: offline_access
+  description: Requests a refresh token for long-lived offline access.
+  flows: [authorizationCode]

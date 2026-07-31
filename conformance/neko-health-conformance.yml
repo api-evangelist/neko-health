@@ -1,0 +1,32 @@
+generated: '2026-07-20'
+method: searched
+source: https://account.nekohealth.com/.well-known/openid-configuration
+note: >-
+  Cross-cutting standards conformance asserted from the live OIDC discovery
+  document. Neko exposes no public third-party developer API, so most API-standard
+  checks are not applicable rather than failing.
+standards:
+- id: oauth2
+  conforms: true
+  evidence: >-
+    account.nekohealth.com publishes /.well-known/oauth-authorization-server
+    (RFC 8414) with authorize/token/introspect/revocation endpoints.
+- id: oidc
+  conforms: true
+  evidence: >-
+    account.nekohealth.com publishes /.well-known/openid-configuration with
+    RS256 id_token signing and userinfo endpoint (Duende IdentityServer).
+- id: pkce
+  conforms: true
+  evidence: >-
+    Live authorize requests use code_challenge_method S256 (observed in patientui
+    client authorization flow).
+- id: rfc8414-oauth-metadata
+  conforms: true
+  evidence: /.well-known/oauth-authorization-server returns 200.
+- id: fhir-r4
+  conforms: false
+  evidence: No public FHIR or health-data API surface is published.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: No public API spec available to assess error format.

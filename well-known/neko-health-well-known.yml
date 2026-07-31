@@ -1,0 +1,37 @@
+generated: '2026-07-20'
+method: searched
+source: https://account.nekohealth.com/.well-known/openid-configuration
+note: >-
+  account.nekohealth.com runs a Duende IdentityServer OIDC provider for the Neko
+  patient application (client_id patientui). This is consumer/patient app
+  identity, not a public third-party developer API. app.nekohealth.com returned
+  HTTP 200 text/html for every probed path (SPA fallback) and is NOT a real
+  well-known surface. www.nekohealth.com rate-limited (429) at probe time.
+hosts:
+  - host: https://account.nekohealth.com
+    documents:
+      - path: /.well-known/openid-configuration
+        status: 200
+        file: neko-health-openid-configuration.json
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        file: neko-health-oauth-authorization-server.json
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+  - host: https://app.nekohealth.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        note: SPA fallback (text/html), not a real security.txt
+      - path: /.well-known/openid-configuration
+        status: 200
+        note: SPA fallback (text/html), not a real OIDC document
+  - host: https://api.nekohealth.com
+    documents:
+      - path: /.well-known/openid-configuration
+        status: 0
+        note: host does not resolve / no response
