@@ -62,7 +62,6 @@ tags:
 - Body Scan
 - Diagnostics
 - Consumer Health
-- OpenID Connect
 - Sweden
 apis: []
 maintainers:
@@ -101,3 +100,5 @@ common:
   url: conformance/neko-health-conformance.yml
 - type: DomainSecurity
   url: security/neko-health-domain-security.yml
+x-tags-removed:
+- OpenID Connect
