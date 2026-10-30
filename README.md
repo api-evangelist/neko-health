@@ -64,6 +64,92 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Neko Health is a company surfaced as a portfolio company of atomico, general-catalyst, lightspeed-venture-partners and added to the API Evangelist network as a stub for enrichment. Sector: health. This profile is a lead awaiting the enrichment pipeline.
+Neko Health is a Swedish preventive-healthcare company founded in 2018 by Daniel Ek and Hjalmar Nilsonne. It designs, engineers, and assembles its own full-body scanning hardware in Stockholm and operates clinics across Sweden, the UK (London, Manchester, Birmingham) and, following a $700M Series C, the United States. The roughly 60-minute Neko Health Scan is a non-invasive, radiation-free examination that captures millions of data points across the skin, heart, blood, and circulation in a single visit, feeding a consumer patient app. Neko exposes no public third-party developer API; its only public machine surface is a Duende IdentityServer OIDC provider (account.nekohealth.com) that authenticates the patient application. This profile was surfaced as a venture-portfolio lead and enriched from Neko's public web and identity surface.
 
-Backed by: atomico, general-catalyst, lightspeed-venture-partners — https://www.nekohealth.com
+**Areas:** Company · Health · Healthcare · Preventive Health · Medical · Body Scan · Diagnostics · Consumer Health · Sweden
+
+## Neko Health on APIs.io
+
+Everything profiled for Neko Health is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/neko-health/](https://apis.io/providers/neko-health/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Neko Health Authentication](https://apis.io/security/neko-health/neko-health-authentication/)
+- [Neko Health Domain Security](https://apis.io/security/neko-health/neko-health-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Neko Health Scopes](https://apis.io/scopes/neko-health/neko-health-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.nekohealth.com)
+- [Pricing](https://www.nekohealth.com/se/en/health-scan)
+- [Sign up](https://account.nekohealth.com/login/phone)
+- [Support](https://www.nekohealth.com/us/en/faq)
+- [Blog](https://www.nekohealth.com/gb/en/press)
+- [Terms of service](https://legal.nekohealth.com/)
+- [Privacy policy](https://www.nekohealth.com/se/en/privacy-policy)
+
+## API Evangelist rating
+
+**Kin Score 17.2** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 15.5 |
+| Access clarity | 23.7 |
+
+**Agent readiness 10.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 28.1** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/neko-health/](https://apis.io/providers/neko-health/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Neko Health: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/neko-health/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
